@@ -9,25 +9,25 @@ Copy all text |	`:%y+`	| Tells vim to yank all text on the page the ‘+’ copi
 Select all text |	`ggVG` |	Goes to the top then visual then jumps to the bottom
 Page up | 	<C-B>	This moves the page up (by a page) |
 Page down |	<C-W>	This moves the page down (by a page) natively this command is <C-F> |
-~ |	Toggle  case of the character under the cursor, or all visually-selected characters. |
-3~		Toggle | case of the next three characters. |
-g~3w		Toggle | case of the next three words. |
-g~iw		Toggle | case of the current word (inner word – cursor anywhere in word). |
-g~$		Toggle | case of all characters to end of line. |
-g~~		Toggle | case of the current line (same as V~). |
-U		Uppercase | the visually-selected text. First press v or V then move to select text. If you don't select text, pressing U will undo all changes to the current line. |
-gUU		Change | the current line to uppercase (same as VU). |
-gUiw		Change | current word to uppercase. |
-u		Lowercase | the visually-selected text. If you don't select text, pressing u will undo the last change. |
-guu		Change | the current line to lowercase (same as Vu). |
-) | 		Jump forward one sentence. |
-( | 		Jump backward one sentence. |
-} | 		Jump forward one paragraph. |
-{ | 		Jump backward one paragraph. |
+`~` |	Toggle  case of the character under the cursor, or all visually-selected characters. |
+`3~`		| Toggle case of the next three characters. |
+`g~3w`		| Toggle case of the next three words. |
+`g~iw`		 | Toggle case of the current word (inner word – cursor anywhere in word). |
+`g~$`		| Toggle case of all characters to end of line. |
+`g~~`		 | Toggle case of the current line (same as V~). |
+`U`	 | Uppercase the visually-selected text. First press v or V then move to select text. If you don't select text, pressing U will undo all changes to the current line. |
+`gUU`		| Change the current line to uppercase (same as VU). |
+`gUiw`		| Change current word to uppercase. |
+`u`	 | 	Lowercase the visually-selected text. If you don't select text, pressing u will undo the last change. |
+`guu`	 | 	Change the current line to lowercase (same as Vu). |
+`)` | 		Jump forward one sentence. |
+`(` | 		Jump backward one sentence. |
+`}` | 		Jump forward one paragraph. |
+`{` | 		Jump backward one paragraph. |
 Just before a character |	`t<char>` |	find a character forward in a line and move un(t)il it (one character before)
-:e. 	| Open integrated file explorer	 |
-:Sex	| Split  window and open integrated file explorer	 |
-"Scroll Upwards"|	`<Ctrl-Y>` |	Scrolls upwards without moving the cursor till page end
+`:e.` 	| Open integrated file explorer	 |
+`:Sex`	| Split  window and open integrated file explorer	 |
+Scroll Upwards|	`<Ctrl-Y>` |	Scrolls upwards without moving the cursor till page end
 High| `H` |	Jumps to top of the page (approx)
 Middle | `M`	| Jumps to the middle of the page (approx)
 Low	 | `L`	|Jumps  to the bottom of the page (approx) 
@@ -57,12 +57,12 @@ Setting Marks	|`m .. [char]` |	Press M to initialise a mark and the character wi
 Using Marks	|``[char] `|	To use a mark use backtick with the character set as the mark
 lower case and upper case marks | ```a  … `A``|	a lower case mark (26 can be set) will move you to a point within a buffer/file however an upper case mark will move you between buffers |
 Single quote mark	|`‘[char]` |	Hitting a single quote then mark will move you to the beginning of the line where the mark was set |
-Mapping	|:map <key> “motion” |	maps a key to a motion |
+Mapping	|`:map <key> “motion”` |	maps a key to a motion |
 mode mapping	| `vmap - visual mode, nmap - normal mode, imap - insert mode `|   	Mapping based on the current mode user is in BEWARE - this kind of mapping can lead to recursive mapping especially if there is future unexpected conflict with plugins|
 non-recursive mapping	| `inormap, vnoremap, nnoremap` |	These mappings do not take other mappings into account e.g if x is mapped to dd and dd mapped to U a non recursive mapping will stop x from performing U’s function
 reselect text	|`gv` | 	Reselect a previously selection portion of text
 Replace a word	|`:%s/word/replacement/g` |	Replaces a word searched for and all its instances with the replacement. use a c flag after the g and you will be prompted for each replacement
-Scroll down the page	| Ctrl E |	Scrolls down the page, cursor doesn’t move with this
+Scroll down the page	| `Ctrl E` |	Scrolls down the page, cursor doesn’t move with this
 Scroll up the page	| `Ctrl Y` |	Scrolls up the page as above
 Minimize all windows/ splits except current	| `:on`	| This command minimises all splits it is short for `:only` has same effect as <C-W> <C-O>
 Append at the end	| `A`	| Starts the append command at the end of a line
@@ -101,7 +101,7 @@ Finds the word under the cursor |	`* #, g* g#` 	 | find word under cursor (forwa
 `:bufdo! bw`	|	deletes all buffers except those with unwritten changes |
 `:bufdo! bw`	|	deletes all buffers, no error on any unwritten changes |
 `/search … N` |	`N` |	search backwards once search pattern has been input
-``/search … c`|	`c` |	Accept search result at cursor position |
+`/search … c`|	`c` |	Accept search result at cursor position |
 `:bw` |        		deletes the current buffer, errors if there are unwritten changes |
 `:bw!` | 		deletes the current buffer, no error if unwritten changes |
 `:bufdo  bw` |		deletes all buffers, stops at first error (unwritten changes) |
